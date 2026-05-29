@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapshotX</title>
+
+    <!-- Favicon (inline PNG) -->
+    <link rel="icon" type="image/x-icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAA3CAYAAACo29JGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQkSURBVGhD7ZjRS1tXGMB/uTf3JprIXIooUlMmfamTjTRQZcUn2SBlkjJmGcOX+lKf+tSX+Qf0ZfbdveSpG9t8MWNUGAQ2ZKAFKxti2RYqUygWWXAY0+Re780ejPP25CbxJlfbSH5v+b6bj/PLyT3nfMfT8XZ3kXOKJAbOEy25ZqUl16y05JqVllyz4jmbE0qIYu8E+nsjFPpCAMhby6i/J/E+XxYfdo3TlesY5+DKDbTBMIYiJkvoGZS1RdSnD5H2MmK2IU5BLoR5+R5adAi9U8zVYHcT38pD1HRKzNSFy3IDHHz0gJfvqGIC9Czys0X8KwkkRtGjN9H6ezBtZtSzMUfgp1k8YsIh7sp1z7B/M4JpCUnPV1FX5lBs360Qxd5JtOgIWm/QEs+izsfxvbCE6sDV1dIMX3pFDMDsuoRxMYKpWAdfQhnCuPguRpeYC2KER4SYc1ydOfNakv2IONBjPDvr+JbmkYmgD4+glUkdI63eJ/C4sXfP1ZmrRbFrgPzYNPtjsXIxI4u8r70aa5AzlbPDk9nEl5qhIxHH/+c5kZPScwQScYJzt1HTC5S9rC7w2uTkv2eR9KwYdpXXJncWuCgXBJsNuW7stg6HNL4VKDGMwRsUBgcw2sVkZZTUKP506YM8hHllgnx0AMNveSi3jbr2CGUtWddfuD45KYzZN4kejZQv6SdESY3jy02iDY+gXQjW/A95dtbxrTxC2Tr54uNQLoR59QG5q2GKspgDTJB3MxidoZqDxazwUtSqYWTxPknQ9iQpZspwJFd8/2uywz1iuHSa/x71WelXlcKY/VPOOgOHNeSladp/szuvHuNAbhTts2kKb1lC+2nafvwC726VPqzzLvmP4+gBMVGi3hr/LhP4dtp2co9wIDdF/s44uhg2S131SgLvztEKEaLYdQs9OnrYeVcbAfXWSNP21R28YthC43JW9AzerSzFviqddy1OXKO2XNnv0RBKiIN+m0HtbuJLLVYdyP+4UaOEu3JWjCzyHwsEvhmn47vbqOlt5511gzVOR25vlUAiTvvPM/Vf+rhQ43TkTO3EG21FXKhxOnJvCC25Q/aovg9UoWMc/cNY3V8Hmxq6VnNxcSCXRNlwcg0QpNh9j8InSfY+nyLfX88Bu1Tj04WyGp6NJeyOt1YcbOKAFEMfu0u+x+bS1YqeRdaD9i1QLoNMyD5npUoNz4sU7T/cR6qx4DiTg8Om9MIEhQ9iwkVqdTw76/h+TaC8WC3NyBTa9erXeyKenXX8v3yJ959NMWVLHXIWlBgH1yfIX+6p0AJpyH+lDq/QK+1V7XH0a7coVKphZJHTi/gfzyLlnDWsjckdIUUwBybJR0rdeG4bdXUe9ekcHkN8uAJu1BBwR+4NxcFq2Xy05JqVllyz0pJrVlpyzUpLrlk513L/AW0+oSMI6KfAAAAAAElFTkSuQmCC">
+
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/61ea93b21f.js" crossorigin="anonymous"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="scroller">
+
+    <!-- Loading overlay -->
+    <div class="loading-screen" id="loading-screen">
+        <div></div>
+        <span class="loader"></span>
+    </div>
+
+    <!-- Settings panel -->
+    <div id="settings-c">
+        <i id="closer" class="fa-solid fa-xmark"></i>
+        <div id="settings-cc" class="scroller">
+
+            <h2 style="font-family: NEON, sans-serif;">
+                <i class="fa-solid fa-pen" style="margin-right: 20px;"></i>Styles
+            </h2>
+            <div style="display: flex;">
+                <div datat="2||#e5d0c3||#d46200||all 0.2s ease-in-out" class="styles-divs">Sharp</div>
+                <div datat="10||#c3d2e5||#00a3d4||all 0.2s ease-in-out" class="styles-divs">Soft</div>
+                <div datat="5||#c3d0e5||#0078d4||all 0s ease-in-out"    class="styles-divs">Still</div>
+            </div>
+
+            <h2 style="font-family: NEON, sans-serif;">
+                <i class="fa-solid fa-gear" style="margin-right: 20px;"></i>3D Model Viewer
+            </h2>
+            <div class="display-type1">
+                <h5>Zoom Sensitivity</h5>
+                <div class="wrapper" style="--wi: 50%">
+                    <input id="zoomRange" class="range-class" type="range" min="0" max="100" value="50" step="12.5">
+                </div>
+            </div>
+            <div class="display-type1">
+                <h5>Texture Quality</h5>
+                <div style="display:flex;gap:8px;">
+                    <div class="styles-divs" id="tq-low">Low</div>
+                    <div class="styles-divs" id="tq-mid">Mid</div>
+                    <div class="styles-divs" id="tq-high" style="outline:2px solid var(--accent-color)">High</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- App header -->
+    <h1>
+        <i class="fa-solid fa-cubes" style="margin-right: 10px; color: var(--accent-color);"></i>SnapshotX
+    </h1>
+
+    <div id="header">
+        <button class="btn" id="import-btn">Import</button>
+        <button class="btn" id="export-btn">Save</button>
+        <button class="btn" id="settings-btn">Settings</button>
+    </div>
+
+    <div id="world-header">
+        <button class="preview-btn" id="world-objects">World Objects</button>
+        <button class="preview-btn" id="prototypes">Prototypes</button>
+        <button class="preview-btn" id="links">Links</button>
+        <button class="preview-btn" id="object-links">Object Links</button>
+    </div>
+
+    <!-- Hidden file input -->
+    <input type="file" accept=".json,.kgm" style="display: none;">
+
+    <!-- Size indicator -->
+    <div id="size-previewer">0</div>
+
+    <!-- Previewers -->
+    <div id="world-objects-previewer" class="previewer">
+        <div class="preview scroller"><ul></ul></div>
+        <div class="preview scroller"></div>
+    </div>
+
+    <div id="prototypes-previewer" class="previewer">
+        <div class="preview scroller"><ul></ul></div>
+        <div class="preview scroller"></div>
+    </div>
+
+    <div id="links-previewer" class="previewer">
+        <div class="preview scroller"><ul></ul></div>
+        <div class="preview scroller"></div>
+    </div>
+
+    <div id="object-links-previewer" class="previewer">
+        <div class="preview scroller"><ul></ul></div>
+        <div class="preview scroller"></div>
+    </div>
+
+    <!-- Single entry point — enums.js and decoder.js are imported by app.js -->
+    <script type="module" src="app.js"></script>
+
+</body>
+</html>
