@@ -505,7 +505,6 @@ function hexToRGBA(hex) {
 }
 
 // ─── Texture atlas — quality-switchable ──────────────────────────────────────
-
 /*
 const ATLAS_PATHS = {
     low:  './images/atlasLowArray.png',
@@ -533,6 +532,7 @@ function _loadAtlas(quality) {
         _atlasImg.onload  = resolve;
         _atlasImg.onerror = () => console.error('Failed to load atlas:', ATLAS_PATHS[quality]);
     });
+    _atlasImg.crossOrigin = 'anonymous';
     _atlasImg.src = ATLAS_PATHS[quality];
 }
 
