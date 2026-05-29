@@ -506,11 +506,20 @@ function hexToRGBA(hex) {
 
 // ─── Texture atlas — quality-switchable ──────────────────────────────────────
 
+/*
 const ATLAS_PATHS = {
     low:  './images/atlasLowArray.png',
     mid:  './images/atlasMidArray.png',
     high: './images/atlasHighArray.png',
 };
+*/
+const origin = "https://media.githubusercontent.com/media/Zpayer/SnapShotX/main";
+const ATLAS_PATHS = {
+    low:  origin + '/images/atlasLowArray.png',
+    mid:  origin + '/images/atlasMidArray.png',
+    high: origin + '/images/atlasHighArray.png',
+};
+
 
 let _currentQuality = 'high';
 let _tileCache      = new Map();
